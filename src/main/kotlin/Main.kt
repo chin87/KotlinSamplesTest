@@ -1,7 +1,5 @@
 package org.example
 
-import bubbleSort
-import insertionSort
 import selectionSort
 
 fun main() {
@@ -11,10 +9,31 @@ fun main() {
     //input [1,2,3,4,5,5]
     //input n -> 1, 2
 
-    val array = arrayOf(4,3,1,2,5)
-    val n = 2
-    println(" "+largest(array, n))
+    //val array = arrayOf(4,3,1,2,5)
+    //val n = 2
+    //println(" "+largest(array, n))
+
+    //println(" "+addNumberSolKotlinFunctions(11))
+    //println(" addition : "+addNumberSolBasic(1112))
 }
+
+fun addNumberSolBasic(n: Int): Int {
+    var added = 0
+    var inputNumber = n
+    while(inputNumber != 0){
+        added += inputNumber%10
+        inputNumber /= 10
+    }
+    return added
+}
+
+fun addNumberSolKotlinFunctions(n: Int): Int {
+    val x = n.toString().toCharArray()
+    println(n.toString().toCharArray())
+    val returnX = x[0].digitToInt() + x[1].digitToInt()
+    return returnX
+}
+
 
 fun largest(arr: Array<Int>, input: Int): Int{
     //return bubbleSort(arr)[arr.size-input]
